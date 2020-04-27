@@ -1,0 +1,41 @@
+{"subject_type": "ORGANIZATION", "predicate": "org:founded_by", "object_type": {"PERSON": "PERSON"}}
+{"subject_type": "PERSON", "predicate": "per:employee_of", "object_type": {"ORGANIZATION": "ORGANIZATION", "LOCATION": "LOCATION"}}
+{"subject_type": "ORGANIZATION", "predicate": "org:alternate_names", "object_type": {"ORGANIZATION": "ORGANIZATION", "MISC": "MISC"}}
+{"subject_type": "PERSON", "predicate": "per:cities_of_residence", "object_type": {"CITY": "CITY", "LOCATION": "LOCATION"}}
+{"subject_type": "PERSON", "predicate": "per:children", "object_type": {"PERSON": "PERSON"}}
+{"subject_type": "PERSON", "predicate": "per:title", "object_type": {"TITLE": "TITLE"}}
+{"subject_type": "PERSON", "predicate": "per:siblings", "object_type": {"PERSON": "PERSON"}}
+{"subject_type": "PERSON", "predicate": "per:religion", "object_type": {"RELIGION": "RELIGION"}}
+{"subject_type": "PERSON", "predicate": "per:age", "object_type": {"NUMBER": "NUMBER", "DURATION": "DURATION"}}
+{"subject_type": "ORGANIZATION", "predicate": "org:website", "object_type": {"URL": "URL"}}
+{"subject_type": "PERSON", "predicate": "per:stateorprovinces_of_residence", "object_type": {"STATE_OR_PROVINCE": "STATE_OR_PROVINCE", "LOCATION": "LOCATION"}}
+{"subject_type": "ORGANIZATION", "predicate": "org:member_of", "object_type": {"ORGANIZATION": "ORGANIZATION", "LOCATION": "LOCATION", "COUNTRY": "COUNTRY", "STATE_OR_PROVINCE": "STATE_OR_PROVINCE"}}
+{"subject_type": "ORGANIZATION", "predicate": "org:top_members/employees", "object_type": {"PERSON": "PERSON"}}
+{"subject_type": "PERSON", "predicate": "per:countries_of_residence", "object_type": {"COUNTRY": "COUNTRY", "NATIONALITY": "NATIONALITY", "LOCATION": "LOCATION"}}
+{"subject_type": "ORGANIZATION", "predicate": "org:city_of_headquarters", "object_type": {"CITY": "CITY", "LOCATION": "LOCATION"}}
+{"subject_type": "ORGANIZATION", "predicate": "org:members", "object_type": {"ORGANIZATION": "ORGANIZATION", "COUNTRY": "COUNTRY"}}
+{"subject_type": "ORGANIZATION", "predicate": "org:country_of_headquarters", "object_type": {"COUNTRY": "COUNTRY", "LOCATION": "LOCATION"}}
+{"subject_type": "PERSON", "predicate": "per:spouse", "object_type": {"PERSON": "PERSON"}}
+{"subject_type": "ORGANIZATION", "predicate": "org:stateorprovince_of_headquarters", "object_type": {"STATE_OR_PROVINCE": "STATE_OR_PROVINCE", "LOCATION": "LOCATION"}}
+{"subject_type": "ORGANIZATION", "predicate": "org:number_of_employees/members", "object_type": {"NUMBER": "NUMBER"}}
+{"subject_type": "ORGANIZATION", "predicate": "org:parents", "object_type": {"ORGANIZATION": "ORGANIZATION", "COUNTRY": "COUNTRY", "STATE_OR_PROVINCE": "STATE_OR_PROVINCE", "LOCATION": "LOCATION"}}
+{"subject_type": "ORGANIZATION", "predicate": "org:subsidiaries", "object_type": {"ORGANIZATION": "ORGANIZATION", "LOCATION": "LOCATION", "COUNTRY": "COUNTRY"}}
+{"subject_type": "PERSON", "predicate": "per:origin", "object_type": {"NATIONALITY": "NATIONALITY", "COUNTRY": "COUNTRY", "LOCATION": "LOCATION"}}
+{"subject_type": "ORGANIZATION", "predicate": "org:political/religious_affiliation", "object_type": {"RELIGION": "RELIGION", "IDEOLOGY": "IDEOLOGY"}}
+{"subject_type": "PERSON", "predicate": "per:other_family", "object_type": {"PERSON": "PERSON"}}
+{"subject_type": "PERSON", "predicate": "per:stateorprovince_of_birth", "object_type": {"STATE_OR_PROVINCE": "STATE_OR_PROVINCE"}}
+{"subject_type": "ORGANIZATION", "predicate": "org:dissolved", "object_type": {"DATE": "DATE"}}
+{"subject_type": "PERSON", "predicate": "per:date_of_death", "object_type": {"DATE": "DATE"}}
+{"subject_type": "ORGANIZATION", "predicate": "org:shareholders", "object_type": {"PERSON": "PERSON", "ORGANIZATION": "ORGANIZATION"}}
+{"subject_type": "PERSON", "predicate": "per:alternate_names", "object_type": {"PERSON": "PERSON", "MISC": "MISC"}}
+{"subject_type": "PERSON", "predicate": "per:parents", "object_type": {"PERSON": "PERSON"}}
+{"subject_type": "PERSON", "predicate": "per:schools_attended", "object_type": {"ORGANIZATION": "ORGANIZATION"}}
+{"subject_type": "PERSON", "predicate": "per:cause_of_death", "object_type": {"CAUSE_OF_DEATH": "CAUSE_OF_DEATH"}}
+{"subject_type": "PERSON", "predicate": "per:city_of_death", "object_type": {"CITY": "CITY", "LOCATION": "LOCATION"}}
+{"subject_type": "PERSON", "predicate": "per:stateorprovince_of_death", "object_type": {"STATE_OR_PROVINCE": "STATE_OR_PROVINCE", "LOCATION": "LOCATION"}}
+{"subject_type": "ORGANIZATION", "predicate": "org:founded", "object_type": {"DATE": "DATE"}}
+{"subject_type": "PERSON", "predicate": "per:country_of_birth", "object_type": {"COUNTRY": "COUNTRY", "LOCATION": "LOCATION", "NATIONALITY": "NATIONALITY"}}
+{"subject_type": "PERSON", "predicate": "per:date_of_birth", "object_type": {"DATE": "DATE"}}
+{"subject_type": "PERSON", "predicate": "per:city_of_birth", "object_type": {"CITY": "CITY", "LOCATION": "LOCATION"}}
+{"subject_type": "PERSON", "predicate": "per:charges", "object_type": {"CRIMINAL_CHARGE": "CRIMINAL_CHARGE"}}
+{"subject_type": "PERSON", "predicate": "per:country_of_death", "object_type": {"COUNTRY": "COUNTRY", "NATIONALITY": "NATIONALITY", "LOCATION": "LOCATION"}}
