@@ -5,6 +5,11 @@ Directly extract relation triples from raw text. Running on Linux.
 ```python
 python triple.py
 ```
+or 
+```python
+import triple
+triple.triple("Anna Mae Pictou Aquash , a Mi ` kmaq Indian from Canada , was brutally murdered in 1975.")
+```
 
 ## Prerequisites
 Linux Shell
