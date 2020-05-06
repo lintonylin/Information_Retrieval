@@ -31,12 +31,12 @@ Then install OpenNRE:
 cd OpenNRE
 pip install -r requirements.txt
 python setup.py install 
+cd ..
 ```
 Download Pretrained file:
 ```
 cd pretrain
 bash download_bert.sh
-cd ../../
 ```
 
 ### 2. Install Stanfordcorenlp
