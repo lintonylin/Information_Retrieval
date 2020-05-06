@@ -44,7 +44,8 @@ def NER(sentence):
         i = i + 1
     return tokens, entities
 
-def triple(tokens, entites):
+def triple(sentence):
+    tokens, entities = NER(sentence)
     if (len(entities)) <= 1:
         return []
     maxscore = -1
@@ -66,14 +67,13 @@ def triple(tokens, entites):
             if score > maxscore:
                 result = [entities[i]['name'], pred, entities[j]['name']]
                 maxscore = score
-                print(result)
+                # print(result)
 
     return result
 
 
 if __name__ == '__main__':
     sentence = "Anna Mae Pictou Aquash , a Mi ` kmaq Indian from Canada , was brutally murdered in 1975."
-    tokens, entities = NER(sentence)
-    triples = triple(tokens, entities)
+    triples = triple(sentence)
     print('triples:')
     print(triples)
