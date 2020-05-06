@@ -1,5 +1,5 @@
 # Information_Retrieval
-Directly extract relation triples from raw text. Based on Stanford TACRED Data and Distant Supervision. Running on Linux.
+Directly extract relation triples from raw text. Running on Linux.
 ## Example
 ### Simple Usage
 ```python
