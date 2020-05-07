@@ -90,3 +90,8 @@ Then, simply run
 python triple.py
 ```
 to get relation triples from raw sentence.
+To run on a server:
+```python
+python server.py --port 12345
+```
+Change the port and send GET request to server to get result

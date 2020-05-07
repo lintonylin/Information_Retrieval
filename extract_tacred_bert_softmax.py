@@ -12,6 +12,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--mask_entity', action='store_true', help='Mask entity mentions')
 parser.add_argument('--pretrain_path', default='bert-base-uncased', help='Pre-trained ckpt path (hugginface)')
 parser.add_argument('--ckpt', default='tacred_bert_softmax', help='Checkpoint name')
+parser.add_argument('--port', default=12345, help='backend port')
 args = parser.parse_args()
 
 # Some basic settings

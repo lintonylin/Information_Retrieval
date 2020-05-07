@@ -1,5 +1,5 @@
 from stanfordcorenlp import StanfordCoreNLP
-import extract_tacred_bert_softmax
+from extract_tacred_bert_softmax import extract
 
 nlp = StanfordCoreNLP('./stanford-corenlp-full-2018-02-27')
 
@@ -8,11 +8,12 @@ def NER(sentence):
 
     tokens = nlp.word_tokenize(sentence)
     ner = nlp.ner(sentence)
+    # print(ner)
     entities = []
     entity = ''
     pos = []
-    lasttype = 'O'
     i = 0
+    lasttype = 'O'
     for n in ner:
         if n[1] == 'O':
             if len(entity) != 0:
@@ -42,10 +43,17 @@ def NER(sentence):
                 entity = entity + ' ' + n[0]
         lasttype = n[1]
         i = i + 1
+    if lasttype != 'O' and entity not in entities and len(entity) != 0:
+        e = {}
+        pos.append(i-1)
+        e['name'] = entity
+        e['pos'] = pos
+        entities.append(e)
     return tokens, entities
 
 def triple(sentence):
     tokens, entities = NER(sentence)
+    # print(entities)
     if (len(entities)) <= 1:
         return []
     maxscore = -1
@@ -63,7 +71,7 @@ def triple(sentence):
             query['t'] = {}
             query['t']['name'] = entities[j]['name']
             query['t']['pos'] = entities[j]['pos']
-            pred, score = extract_tacred_bert_softmax.extract(query)
+            pred, score = extract(query)
             if score > maxscore:
                 result = [entities[i]['name'], pred, entities[j]['name']]
                 maxscore = score
@@ -73,7 +81,8 @@ def triple(sentence):
 
 
 if __name__ == '__main__':
-    sentence = "Anna Mae Pictou Aquash , a Mi ` kmaq Indian from Canada , was brutally murdered in 1975."
+    sentence = "Barnes Foundation http://baidu.com"
     triples = triple(sentence)
     print('triples:')
     print(triples)
+    nlp.close()
