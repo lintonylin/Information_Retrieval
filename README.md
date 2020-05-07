@@ -53,6 +53,7 @@ Download and upzip Stanfordcore:
 ```
 wget -c http://nlp.stanford.edu/software/stanford-corenlp-full-2018-02-27.zip
 upzip stanford-corenlp-full-2018-02-27.zip
+rm stanford-corenlp-full-2018-02-27.zip
 ```
 
 ### 3. Data Prepare(For Training Only)
@@ -91,7 +92,7 @@ python triple.py
 ```
 to get relation triples from raw sentence.
 To run on a server:
-```python
+```bash
 python server.py --port 12345
 ```
 Change the port and send GET request to server to get result
