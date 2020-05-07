@@ -82,7 +82,8 @@ Download pretrained model file:
 ```bash
 mkdir ckpt
 cd ckpt
-wget -c 
+wget -c https://www.dropbox.com/s/yphpz4m761nn729/tacred_bert_softmax.pth.tar?dl=0
+cd ..
 ```
 Then, simply run
 ```python
