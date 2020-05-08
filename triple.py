@@ -81,7 +81,7 @@ def triple(sentence):
 
 
 if __name__ == '__main__':
-    sentence = "Barnes Foundation http://baidu.com"
+    sentence = "Baidu website: http://baidu.com"
     triples = triple(sentence)
     print('triples:')
     print(triples)

@@ -56,9 +56,7 @@ upzip stanford-corenlp-full-2018-02-27.zip
 rm stanford-corenlp-full-2018-02-27.zip
 ```
 
-### 3. Data Prepare(For Training Only)
-If you want to train your own model, follow this step.
-
+### 3. Data Prepare
 Due to copyright of the Tacred data, we are not able to share the data or our distant supervision based crawled data with you, please download it by yourself.
 
 Get Stanford Tacred Data(https://nlp.stanford.edu/projects/tacred/) and put train.json, dev.json, test.josn under benchmark/tacred, then processing data:
@@ -83,7 +81,7 @@ Download pretrained model file:
 ```bash
 mkdir ckpt
 cd ckpt
-wget -c https://www.dropbox.com/s/yphpz4m761nn729/tacred_bert_softmax.pth.tar?dl=0
+wget -c https://www.dropbox.com/s/yphpz4m761nn729/tacred_bert_softmax.pth.tar
 cd ..
 ```
 Then, simply run
@@ -95,4 +93,7 @@ To run on a server:
 ```bash
 python server.py --port 12345
 ```
-Change the port and send GET request to server to get result
+Change the port and send GET request to server to get result like:
+```
+localhost:12345?content=Baidu website: http://baidu.com
+```
