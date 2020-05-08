@@ -2,7 +2,7 @@
 Directly extract relation triples from raw text. Running on Linux.
 ## Example
 ### Simple Usage
-```python
+```
 python triple.py
 ```
 or 
@@ -18,7 +18,7 @@ Java 1.8+ (Check with command: `java -version`) ([Download Page](http://www.orac
 
 Python 3
 
-CUDA >= 9.0 (Check with command: `nvidia-smi`)([Download Page](https://developer.nvidia.com/cuda-downloads))
+CUDA >= 9.0 (Check with command: `nvcc --version`)([Download Page](https://developer.nvidia.com/cuda-downloads))
 
 ## Installation
 
@@ -28,25 +28,26 @@ Clone the repository from OpenNRE github page:
 git clone https://github.com/thunlp/OpenNRE.git --depth 1
 ```
 Copy modified frame into OpenNRE:
-```
+```bash
 cp sentence_re.py OpenNRE/opennre/framework/sentence_re.py
 ```
 Then install OpenNRE:
-```
+```bash
 cd OpenNRE
 pip install -r requirements.txt
 python setup.py install 
 cd ..
 ```
 Download Pretrained file:
-```
+```bash
 cd pretrain
 bash download_bert.sh
+cd ..
 ```
 
 ### 2. Install Stanfordcorenlp
 Install using pip:
-```python
+```
 pip install stanfordcorenlp
 ```
 Download and upzip Stanfordcore:
@@ -71,7 +72,7 @@ cd ../../
 If you want to train your own model, follow this step.
 
 Run python file to start training:
-```python
+```
 python train_tacred_bert_softmax.py
 ```
 Please modify batch size in line 44 in order to match the graphic memory on your machine.
