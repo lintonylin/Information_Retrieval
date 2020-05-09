@@ -68,14 +68,14 @@ python data.py
 cd ../../
 ```
 
-Use Google Search API to crawl articles based on distant supervision
-Please modify the api key and filename in google crawling.py
+Use Google Search API to crawl articles based on distant supervision.
+Please modify the api key and filename in google crawling.py.
 
 ```
 python google crawling.py
 ```
-Split the target sentences from the articles
-Please modify the filename in processing.py
+Split the target sentences from the articles.
+Please modify the filename in processing.py.
 
 ```
 python processing.py
