@@ -69,7 +69,7 @@ cd ../../
 ```
 
 Use Google Search API to crawl articles based on distant supervision.
-Please modify the api key and filename in google crawling.py.
+Please modify the api key and filename in google_crawling.py.
 
 ```
 python google crawling.py
