@@ -42,7 +42,7 @@ for data in tqdm(train):
         subject = subject + data['token'][i] + ' '
     subject = subject[:-1]
     h['name'] = object
-    h['pos'] = [data['obj_start'], data['obj_start']]
+    h['pos'] = [data['obj_start'], data['obj_end']]
     t['name'] = subject
     t['pos'] = [data['subj_start'], data['subj_end']]
     d['h'] = h
@@ -68,7 +68,7 @@ for data in tqdm(dev):
         subject = subject + data['token'][i] + ' '
     subject = subject[:-1]
     h['name'] = object
-    h['pos'] = [data['obj_start'], data['obj_start']]
+    h['pos'] = [data['obj_start'], data['obj_end']]
     t['name'] = subject
     t['pos'] = [data['subj_start'], data['subj_end']]
     d['h'] = h
@@ -94,7 +94,7 @@ for data in tqdm(test):
         subject = subject + data['token'][i] + ' '
     subject = subject[:-1]
     h['name'] = object
-    h['pos'] = [data['obj_start'], data['obj_start']]
+    h['pos'] = [data['obj_start'], data['obj_end']]
     t['name'] = subject
     t['pos'] = [data['subj_start'], data['subj_end']]
     d['h'] = h
