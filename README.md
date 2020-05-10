@@ -8,7 +8,7 @@ python triple.py
 or 
 ```python
 import triple
-triple.triple("Anna Mae Pictou Aquash , a Mi ` kmaq Indian from Canada , was brutally murdered in 1975.")
+triple.triple("Ivanka is the daughter of Trump. Trump is the father of Ivanka.")
 ```
 
 ## Prerequisites
@@ -45,7 +45,7 @@ bash download_bert.sh
 cd ..
 ```
 
-### 2. Install Stanfordcorenlp
+### 2. Install Stanfordcorenlp and NLTK
 Install using pip:
 ```
 pip install stanfordcorenlp
@@ -55,6 +55,17 @@ Download and upzip Stanfordcore:
 wget -c http://nlp.stanford.edu/software/stanford-corenlp-full-2018-02-27.zip
 upzip stanford-corenlp-full-2018-02-27.zip
 rm stanford-corenlp-full-2018-02-27.zip
+```
+Then install NLTK:
+```
+pip install nltk
+```
+Download tokenizer:
+```python
+python
+import nltk
+nltk.download('punkt')
+exit()
 ```
 
 ### 3. Data Prepare
@@ -113,7 +124,7 @@ python server.py --port 12345
 ```
 Change the port and send GET request to server to get result like:
 ```
-localhost:12345?content=Baidu website: http://baidu.com
+localhost:12345?content=Ivanka is the daughter of Trump. Trump is the father of Ivanka.
 ```
 
 ## Performance
