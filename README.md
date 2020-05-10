@@ -1,6 +1,9 @@
 # Information_Retrieval
 Directly extract relation triples from raw text. Running on Linux.
 ## Example
+### Demo
+We prepared a [demo website](http://34.105.38.103:8081/demo/). You can input some sentences to get relation triples.
+
 ### Simple Usage
 ```
 python triple.py
