@@ -105,6 +105,8 @@ Then, simply run
 python triple.py
 ```
 to get relation triples from raw sentence.
+
+
 To run on a server:
 ```bash
 python server.py --port 12345
