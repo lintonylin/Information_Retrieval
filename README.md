@@ -11,7 +11,8 @@ python triple.py
 or 
 ```python
 import triple
-triple.triple("Ivanka is the daughter of Trump. Trump is the father of Ivanka.")
+triple.triple("Mr. Scheider played the police chief of a resort town menaced by a shark.")
+# output: triples: [['Scheider', 'per:title', 'police chief', 11.785091400146484]]
 ```
 
 ## Prerequisites
@@ -127,7 +128,7 @@ python server.py --port 12345
 ```
 Change the port and send GET request to server to get result like:
 ```
-localhost:12345?content=Ivanka is the daughter of Trump. Trump is the father of Ivanka.
+localhost:12345?content=Mr. Scheider played the police chief of a resort town menaced by a shark.
 ```
 
 ## Performance
