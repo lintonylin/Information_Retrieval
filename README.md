@@ -68,17 +68,18 @@ python data.py
 cd ../../
 ```
 If you want to crawl distant supervised data by Google search engine, please do as following steps:
-Use Google Search API to crawl articles based on distant supervision.
+
+1). Use Google Search API to crawl articles based on distant supervision.
 Please modify the api key and filename in google_crawling.py.
 
 ```
-python google_crawling.py
+python ./Google_Crawler/google_crawling.py
 ```
-Split the target sentences from the articles.
+2).Split the target sentences from the articles.
 Please modify the filename in processing.py.
 
 ```
-python processing.py
+python ./Google_Crawler/processing.py
 ```
 
 
