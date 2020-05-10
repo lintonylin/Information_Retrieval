@@ -57,7 +57,6 @@ def triple(sentence):
 
     results = []
     for sent in sents:
-        print(sent)
         tokens, entities = NER(sent)
         # print(entities)
         if (len(entities)) <= 1:
