@@ -117,6 +117,6 @@ localhost:12345?content=Baidu website: http://baidu.com
 ## Performance
 model | f1-score 
 :-: | :-: 
-OpenNRE(Origin TARED Data) | 0.809 
-OpenNRE(Crawled Data based on distant supervision) | 0.72
-OpenNRE(Origin TARED Data + Crawled Data based on distant supervision) | 0.815
+BERT-OpenNRE(Origin TARED Data) | 0.809 
+BERT-OpenNRE(Crawled Data based on distant supervision) | 0.72
+BERT-OpenNRE(Origin TARED Data + Crawled Data based on distant supervision) | 0.815
