@@ -96,7 +96,7 @@ Download pretrained model file:
 ```bash
 mkdir ckpt
 cd ckpt
-wget -c https://www.dropbox.com/s/yphpz4m761nn729/tacred_bert_softmax.pth.tar
+wget -c https://www.dropbox.com/s/7f70dy2vatmmly4/tacred_bert_softmax.pth.tar
 cd ..
 ```
 Then, simply run
