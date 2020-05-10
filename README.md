@@ -113,3 +113,10 @@ Change the port and send GET request to server to get result like:
 ```
 localhost:12345?content=Baidu website: http://baidu.com
 ```
+
+## Performance
+model | f1-score 
+:-: | :-: 
+OpenNRE(Origin TARED Data) | 0.809 
+OpenNRE(Crawled Data based on distant supervision) | 0.72
+OpenNRE(Origin TARED Data + Crawled Data based on distant supervision) | 0.815
