@@ -67,7 +67,7 @@ cd ./benchmark/tacred
 python data.py
 cd ../../
 ```
-
+If you want to crawl distant supervised data by Google search engine, please do as following steps:
 Use Google Search API to crawl articles based on distant supervision.
 Please modify the api key and filename in google_crawling.py.
 
