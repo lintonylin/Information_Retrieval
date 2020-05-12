@@ -41,10 +41,10 @@ for data in tqdm(train):
     for i in range(data['subj_start'], data['subj_end'] + 1):
         subject = subject + data['token'][i] + ' '
     subject = subject[:-1]
-    h['name'] = object
-    h['pos'] = [data['obj_start'], data['obj_end']]
-    t['name'] = subject
-    t['pos'] = [data['subj_start'], data['subj_end']]
+    h['name'] = subject
+    h['pos'] = [data['subj_start'], data['subj_end']]
+    t['name'] = object
+    t['pos'] = [data['obj_start'], data['obj_end']]
     d['h'] = h
     d['t'] = t
     train_data.write(json.dumps(d))
@@ -67,10 +67,10 @@ for data in tqdm(dev):
     for i in range(data['subj_start'], data['subj_end'] + 1):
         subject = subject + data['token'][i] + ' '
     subject = subject[:-1]
-    h['name'] = object
-    h['pos'] = [data['obj_start'], data['obj_end']]
-    t['name'] = subject
-    t['pos'] = [data['subj_start'], data['subj_end']]
+    h['name'] = subject
+    h['pos'] = [data['subj_start'], data['subj_end']]
+    t['name'] = object
+    t['pos'] = [data['obj_start'], data['obj_end']]
     d['h'] = h
     d['t'] = t
     val_data.write(json.dumps(d))
@@ -93,10 +93,10 @@ for data in tqdm(test):
     for i in range(data['subj_start'], data['subj_end'] + 1):
         subject = subject + data['token'][i] + ' '
     subject = subject[:-1]
-    h['name'] = object
-    h['pos'] = [data['obj_start'], data['obj_end']]
-    t['name'] = subject
-    t['pos'] = [data['subj_start'], data['subj_end']]
+    h['name'] = subject
+    h['pos'] = [data['subj_start'], data['subj_end']]
+    t['name'] = object
+    t['pos'] = [data['obj_start'], data['obj_end']]
     d['h'] = h
     d['t'] = t
     test_data.write(json.dumps(d))
