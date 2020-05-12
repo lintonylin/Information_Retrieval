@@ -6,11 +6,10 @@ stream_get_meta_data($fp);
 while(!feof($fp)) {
 $result = fgets($fp, 1024);
 }
-
 ?>
 
 
-<div id="main" style="width: 600px;height:400px;margin-right:5%;margin-top:7%;"></div>
+
 <script type="text/javascript">
 
         var s1 = <?php echo $result; ?>;
@@ -19,15 +18,24 @@ $result = fgets($fp, 1024);
 
         var nodes1 = [];
         for (var i=0;i<s1.length;i++){
-             nodes1.push({category:0, name: s1[i][0] +" (sub)","value":3,"size":30});
-             nodes1.push({category:1, name: s1[i][2]+" (ob)","value":3,"size":30});
+             nodes1.push({category:0, name: s1[i][0] +" (sub)","value":1,"size":30});
+             nodes1.push({category:1, name: s1[i][2]+" (ob)","value":1,"size":20});
               }
         var nodes = [];
-        for(var i = 0, l = nodes1.length; i < l; i++) {
-          for(var j = i + 1; j < l; j++)
-            if (nodes1[i] === nodes1[j]) j = ++i;
-          nodes.push(nodes1[i]);
+
+        for (var i = 0, arrayLen = nodes1.length; i < arrayLen; i++) {
+        for (var j = 0, resLen = nodes.length; j < resLen; j++ ) {
+            if (nodes1[i]['name'] === nodes[j]['name']) {
+              nodes[j]['value'] = nodes[j]['value'] + 1;
+                break;
+            }
+          }
+
+        // 如果array[i]是唯一的，那么执行完循环，j等于resLen
+        if (j === resLen) {
+            nodes.push(nodes1[i])
         }
+    }
 
         var links=[];
         for (var i=0;i<s1.length;i++){
@@ -35,7 +43,7 @@ $result = fgets($fp, 1024);
              "flow":s1[i][1].substring(4)+" score: " + + parseFloat(s1[i][3].toFixed(2)), "value":s1[i][3]});
               }
 
-        
+
         nodes.forEach(function (node) {
 
             node.symbolSize = node.size;
@@ -44,7 +52,7 @@ $result = fgets($fp, 1024);
         option = {
 
             title: {
-                text: 'Relationship Grgaph',
+                text: 'Relationship Graph',
                 subtext: '示例',
                 top: 'bottom',
                 left: 'middle'
@@ -58,7 +66,7 @@ $result = fgets($fp, 1024);
                         return params.data.flow;
                     }
                     else{
-                        return params.data.name+":"+params.data.value+"次";
+                        return params.data.name+":"+params.data.value+"Times";
                     }
                 }
             },
@@ -73,7 +81,7 @@ $result = fgets($fp, 1024);
 
             legend: [{
 
-                data:['Body1','Body2']
+                data:['Entity1','Entity2']
             }],
 
             series: [{
@@ -101,10 +109,10 @@ $result = fgets($fp, 1024);
             categories: [
 
                 {
-                    name: 'Body1'
+                    name: 'Entity1'
                 },
                 {
-                    name:'Body2'
+                    name:'Entity2'
                 }
                 ],
             force : {
